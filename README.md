@@ -36,9 +36,9 @@ ctf-root-me/
 This repository is autonomously managed and documented using **Gemini CLI**.
 
 ---
-## 💼 Professional Profile (Merged)
+## 💼 Professional Profile
 # 👋 Hi, I'm Dina
 
-I am a System & Infrastructure Engineer with a decade of self-taught experience, specializing in building sovereign, distributed, and resilient systems. 
+I am a System & Infrastructure Engineer of self-taught experience, specializing in building sovereign, distributed, and resilient systems. 
 
 *Building expertise through continuous challenge and documentation.*
