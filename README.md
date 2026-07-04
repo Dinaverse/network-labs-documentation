@@ -64,8 +64,8 @@ The system will not boot. You will get a **BSD error**. Since the 512GB SSD is a
 
 ### Setup
 
-- **Inside the laptop** — 512GB SSD (cloned, not booting, BSD error)
-- **External USB enclosure** — original 256GB SSD (working OS, used to boot)
+- **Inside the laptop** 512GB SSD (cloned, not booting, BSD error)
+- **External USB enclosure** original 256GB SSD (working OS, used to boot)
 
 ### Boot from the external 256GB drive
 
@@ -159,11 +159,11 @@ Once booted into Windows on your 512GB SSD:
 > When cloned to a larger drive, that backup table is misplaced, causing a BSD boot error.
 > Boot Windows from the original drive connected externally, run `recover` in Diskpart
 > to remap the GPT header on the new internal drive, then make sure
-> **UEFI boot mode is enabled in BIOS** — GPT partitions require UEFI to boot.
+> **UEFI boot mode is enabled in BIOS** GPT partitions require UEFI to boot.
 > No Windows ISO required.
 
 ---
 
 ## Author
 
-**Dinaverse** — [GitHub](https://github.com/Dinaverse) | [LinkedIn](https://www.linkedin.com/in/dinacima)
+**Dinaverse** [GitHub](https://github.com/Dinaverse) | [LinkedIn](https://www.linkedin.com/in/dinacima)
