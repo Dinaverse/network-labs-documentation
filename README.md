@@ -56,24 +56,42 @@ Two separate tools are used for two different purposes:
 
 ---
 
-## Step 2: Fix GPT Boot Error with Diskpart via External Drive
+## Step 2: Fix GPT Boot Error with Diskpart
 
-The system will not boot. You will get a **BSD error**. Since the 512GB SSD is already installed inside the laptop and Windows cannot load from it, the fix is to **boot from the original 256GB SSD connected externally** via a USB enclosure.
+The system will not boot. You will get a **BSD error**. Since the 512GB SSD is already installed inside the laptop and Windows cannot load from it, you need an external environment to run Diskpart and fix the GPT table.
 
-> No Windows ISO needed. The original cloned drive is a fully working OS. Just plug it in externally and boot from it. You now have a live Windows environment to run Diskpart and fix the internal 512GB drive.
+There are two ways to get a working CMD environment:
 
-### Setup
+---
 
+### Method A: Boot from the original 256GB SSD externally
+
+> No Windows ISO needed. The original cloned drive is a fully working OS. Just plug it in externally and boot from it.
+
+**Setup:**
 - **Inside the laptop** 512GB SSD (cloned, not booting, BSD error)
 - **External USB enclosure** original 256GB SSD (working OS, used to boot)
 
-### Boot from the external 256GB drive
-
+**Steps:**
 1. Connect your **256GB SSD** in a USB enclosure
 2. Restart and enter the boot menu (`F11`, `F12`, or `DEL` depending on your machine)
 3. Select the **external USB drive** as boot device
 4. Windows boots normally from the 256GB external drive
 5. Open **CMD as Administrator**
+
+---
+
+### Method B: Boot from a Windows USB installation drive
+
+> Use this if you do not have a USB enclosure or prefer a clean recovery environment.
+
+**Steps:**
+1. Create a **bootable Windows USB drive** using the [Media Creation Tool](https://www.microsoft.com/software-download/windows11)
+2. Restart and enter the boot menu (`F11`, `F12`, or `DEL` depending on your machine)
+3. Select the **USB drive** as boot device
+4. When the Windows setup screen appears, press `Shift + F10` to open **CMD directly**
+
+> `Shift + F10` opens a command prompt from within the Windows setup environment without going through the full installation.
 
 ### Run Diskpart
 
