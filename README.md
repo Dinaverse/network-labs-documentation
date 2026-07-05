@@ -1,241 +1,190 @@
-# 🌐 Cisco Packet Tracer Labs Documentation
+# 🌐 Network Labs Documentation & CTF Writeups
 
-> *Comprehensive network topology analysis, configuration documentation, and hands-on lab exercises for enterprise networking fundamentals.*
-
-Network architecture is the backbone of modern infrastructure. This repository documents structured networking labs, routing protocols, switching configurations, and security implementations using **Cisco Packet Tracer**.
+> *Enterprise networking fundamentals, Cisco Packet Tracer labs, and Capture-The-Flag (CTF) challenge solutions for security research and certification preparation.*
 
 ---
 
-## 🎯 Purpose & Objectives
+## 🎯 Dual Purpose Repository
 
-| Icon | Goal | Focus |
-|------|------|-------|
-| 🏗️ | **Network Design** | Enterprise topology modeling and scalable architectures |
-| 🔀 | **Routing & Switching** | OSPF, BGP, VLAN configuration, spanning tree protocols |
-| 🛡️ | **Network Security** | ACLs, firewalling, access control, threat mitigation |
-| 📊 | **Documentation** | Detailed lab walkthroughs with configuration snapshots |
-| 🧪 | **Validation** | Hands-on practice for Cisco CCST/CCNA certifications |
+This repository serves **two complementary functions**:
+
+1. **📖 Cisco Networking Labs** — Hands-on lab exercises for routing, switching, security, and WAN design
+2. **🚩 CTF Challenge Documentation** — Detailed writeups and methodologies from Root-Me and other platforms
 
 ---
 
-## 📂 Repository Structure
+## 📚 Part 1: Cisco Packet Tracer Labs
+
+### 🏗️ Lab Categories
+
+| Category | Focus | Status |
+|----------|-------|--------|
+| **Basic Topology** | Foundational network designs (2-5 routers, switching) | ✅ Complete |
+| **Routing Protocols** | OSPF, BGP, RIP, dynamic routing | ✅ Complete |
+| **Switching & VLANs** | VLAN segmentation, trunking, STP, inter-VLAN routing | ✅ Complete |
+| **Network Security** | ACLs, firewall rules, threat mitigation | ✅ Complete |
+| **WAN Design** | Point-to-point, frame relay, VPN concepts | 🔄 In Progress |
+
+### 🎓 Quick Navigation
+
+**Starting out?**
+- Begin: `cisco-packet-tracer-labs/basic-topology/`
+- Progress: `cisco-packet-tracer-labs/routing-protocols/ospf-basic/`
+- Practice: `cisco-packet-tracer-labs/security-acls/`
+
+**CCST Preparation?**
+- Core networking fundamentals
+- Routing & switching operations
+- Basic security configurations
+
+**CCNA Preparation?**
+- Multi-area OSPF design
+- BGP fundamentals
+- Advanced ACL filtering
+- WAN optimization
+
+### 📂 Lab Structure
 
 ```
-network-labs-documentation/
-├── cisco-packet-tracer-labs/     # Main lab files and configurations
-│   ├── basic-topology/           # Foundational network designs
-│   ├── routing-protocols/        # OSPF, BGP, RIP implementations
-│   ├── switching-vlans/          # VLAN segmentation & trunking
-│   ├── security-acls/            # Access control lists & firewall rules
-│   ├── wan-design/               # WAN topologies and connectivity
-│   └── [lab-name]/               # Individual lab directories
-│
-├── guides/                        # Standalone technical guides
-│   ├── SSD-Clone-GPT-Guide.md    # Disk cloning & partition recovery
-│   └── [topic-guide]/            # Additional reference materials
-│
-├── ctf/                          # CTF writeups (parallel project)
-│   └── ctf-root-me/              # Root-Me challenge solutions
-│
-└── assets/                       # Lab diagrams, screenshots, configs
-    ├── diagrams/                 # Network topology diagrams
-    ├── configs/                  # Router/switch configurations
-    └── screenshots/              # Packet Tracer lab captures
+cisco-packet-tracer-labs/
+├── basic-topology/
+│   ├── README.md                      Lab objectives
+│   ├── topology.pkt                   Packet Tracer file
+│   ├── topology-diagram.png           Network diagram
+│   ├── configuration.md               CLI commands
+│   └── verification.md                Expected results
+├── routing-protocols/
+│   ├── ospf-basic/
+│   ├── ospf-multi-area/
+│   ├── bgp-fundamentals/
+│   └── rip-configuration/
+├── switching-vlans/
+│   ├── vlan-configuration/
+│   ├── stp-optimization/
+│   ├── etherchannel/
+│   └── inter-vlan-routing/
+├── security-acls/
+│   ├── standard-acls/
+│   ├── extended-acls/
+│   ├── named-acls/
+│   └── firewall-zones/
+└── wan-design/
+    ├── point-to-point/
+    ├── frame-relay/
+    └── vpn-tunnels/
 ```
 
----
+### 🧪 Using the Labs
 
-## 🧪 Lab Categories
-
-### 🏗️ **Basic Topology** — Foundational Designs
-- Simple 2-router + switch topology
-- Direct connectivity setup
-- Basic host configuration
-- DHCP and static routing introduction
-
-### 🔀 **Routing Protocols** — Dynamic Routing
-| Protocol | Labs | Concepts |
-|----------|------|----------|
-| **OSPF** | Multi-area OSPF, backbone design | Link-state routing, areas, costs |
-| **BGP** | eBGP, iBGP, AS path manipulation | Exterior routing, policies |
-| **RIP** | RIPv2 implementation | Distance-vector basics |
-
-### 🔗 **Switching & VLANs** — Layer 2 Operations
-- VLAN creation and trunking
-- Spanning Tree Protocol (STP) optimization
-- EtherChannel and link aggregation
-- Inter-VLAN routing
-- Switch security (port security, DHCP snooping)
-
-### 🛡️ **Network Security** — Access Control
-- **Access Control Lists (ACLs)**
-  - Standard ACLs (IP filtering)
-  - Extended ACLs (protocol/port filtering)
-  - Named ACLs and reusability
-- **Firewall Configurations**
-  - Zone-based policy firewalling
-  - Stateful inspection
-  - NAT and port forwarding
-- **Threat Mitigation**
-  - DHCP snooping
-  - ARP inspection
-  - Port security
-
-### 🌍 **WAN Design** — Wide Area Networking
-- Point-to-point links and serial connections
-- Frame Relay and MPLS concepts
-- VPN tunneling basics
-- QoS configuration for WAN optimization
-
----
-
-## 📚 Quick Navigation
-
-### 🎓 **By Learning Path**
-
-| Goal | Start Here | Next Steps |
-|------|-----------|-----------|
-| **New to networking** | Basic Topology labs | Routing Protocols |
-| **Routing focus** | OSPF fundamentals | BGP advanced, multi-area design |
-| **Security focus** | Standard ACLs | Extended ACLs, firewalling |
-| **CCST/CCNA prep** | All foundational labs | Review security & advanced routing |
-| **WAN experience** | Serial connections | Frame Relay, VPN concepts |
-
-### 🔗 **Related Projects in Dinaverse**
-
-This repository is part of the broader **Dinaverse infrastructure ecosystem**:
-
-| Project | Connection | Link |
-|---------|-----------|------|
-| **sovereign-ai-infrastructure** | Overall lab architecture coordination | [View](https://github.com/Dinaverse/sovereign-ai-infrastructure) |
-| **proxmox-homelab-setup** | Physical lab hardware (Proxmox, LXC) | [View](https://github.com/Dinaverse/proxmox-homelab-setup) |
-| **infrastructure-as-code-lab** | IaC for automated network deployment | [View](https://github.com/Dinaverse/infrastructure-as-code-lab) |
-
----
-
-## 🛠️ Stack & Technologies
-
-| Category | Tools & Platforms |
-|----------|-------------------|
-| 🌐 **Network Simulator** | Cisco Packet Tracer 8.x |
-| 🖥️ **Operating Systems** | Cisco IOS, Linux (routing) |
-| 📋 **Documentation** | Markdown, network diagrams, CLI snapshots |
-| 🔧 **Protocols** | IPv4, IPv6, OSPF, BGP, RIP, STP, VLAN, ACL |
-| 🎓 **Certifications** | Cisco CCST, CCNA preparation |
-
----
-
-## ✅ Operational Status
-
-| Component | Status | Last Updated |
-|-----------|--------|---|
-| Cisco Packet Tracer Labs | ✅ Active | 2026-07-05 |
-| Basic Topology Exercises | ✅ Complete | 2026-07-05 |
-| OSPF & BGP Configurations | ✅ Active | 2026-07-05 |
-| VLAN & Switching Labs | ✅ Complete | 2026-07-05 |
-| Security & ACL Modules | ✅ Active | 2026-07-05 |
-| WAN Design Templates | 🔄 In Progress | 2026-07-05 |
-| Documentation | ✅ Comprehensive | 2026-07-05 |
-
----
-
-## 📖 How to Use This Repository
-
-### 1️⃣ **Clone & Setup**
 ```bash
-git clone https://github.com/Dinaverse/network-labs-documentation.git
-cd network-labs-documentation
-```
+# 1. Download Cisco Packet Tracer
+# https://www.netacad.com/resources/packet-tracer
 
-### 2️⃣ **Open in Cisco Packet Tracer**
-- Download [Cisco Packet Tracer](https://www.netacad.com/resources/packet-tracer)
-- Navigate to the lab folder of choice
-- Open `.pkt` files directly in Packet Tracer
+# 2. Open lab file
+open cisco-packet-tracer-labs/basic-topology/topology.pkt
 
-### 3️⃣ **Study the Configuration**
-Each lab includes:
-- 📄 **README.md** — Lab objectives and walkthrough
-- 🖼️ **Diagram** — Network topology visualization
-- ⚙️ **Config Snippets** — Router/switch CLI commands
-- 📸 **Screenshots** — Expected Packet Tracer results
+# 3. Study configuration
+cat cisco-packet-tracer-labs/basic-topology/configuration.md
 
-### 4️⃣ **Practice & Validate**
-- Run simulation mode to test configurations
-- Verify routing tables with `show ip route`
-- Test connectivity with ping/traceroute
-- Validate ACLs with traffic flow tests
+# 4. Practice in simulation mode
+# - Enter Simulation mode in Packet Tracer
+# - Verify connectivity with ping/traceroute
+# - Test configurations
 
----
-
-## 🏛️ Lab Architecture Overview
-
-```
-┌─────────────────────────────────────────────────────────┐
-│                  Internet / ISP                         │
-└────────────────────┬────────────────────────────────────┘
-                     │
-          ┌──────────┴──────────┐
-          │                     │
-    ┌─────▼──────┐        ┌────▼──────┐
-    │ Router R1  │────────│ Router R2  │  (OSPF/BGP)
-    │ (Core)     │  Link  │ (Border)   │
-    └──┬──────┬──┘        └────┬──────┬┘
-       │      │                │      │
-    ┌──▼──┐ ┌─▼──┐       ┌──┐ │    ┌─▼──┐
-    │ SW1 │ │SW2 │       │FW│ │    │ SW3│
-    └──┬──┘ └────┘       └──┘ │    └────┘
-       │ VLAN 10,20,30        │
-    ┌──┴────────────┐     ┌───▼────┐
-    │   Hosts       │     │ DMZ    │
-    │   PCs/Servers │     │ Servers│
-    └───────────────┘     └────────┘
+# 5. Validate results
+cat cisco-packet-tracer-labs/basic-topology/verification.md
 ```
 
 ---
 
-## 📊 Lab Progress Tracking
+## 🚩 Part 2: CTF Challenge Documentation
 
-### 🎯 **Discovery Program** (Cisco Certification Focus)
-- ✅ **Basic Networking:** 5/5 labs completed
-- ✅ **Routing:** 8/8 labs completed
-- ✅ **Switching:** 6/6 labs completed
-- ✅ **Security:** 5/5 labs completed
-- 🔄 **Advanced Topics:** 3/7 in progress
+### 🏆 Progress Tracking
 
-### 🏆 **Certification Prep**
-- 📚 **CCST (Cisco Certified Support Technician)** — Target completion: Q3 2026
-- 📚 **CCNA (Cisco Certified Network Associate)** — Target completion: Q4 2026
+#### Root-Me PRO: Discovery Program
+
+| Category | Progress | Status |
+|----------|----------|--------|
+| Programming | 4/4 | ✅ Complete |
+| Network | 3/3 | ✅ Complete |
+| Web Client | 4/4 | ✅ Complete |
+| Web Server | 4/4 | ✅ Complete |
+| Cryptography | 3/3 | ✅ Complete |
+| Steganography | 3/3 | ✅ Complete |
+
+#### Root-Me PRO: CTF Training
+
+| Difficulty | Progress | Status |
+|-----------|----------|--------|
+| Easy | 15/15 | ✅ Complete |
+| Medium | 10/14 | 🔄 In Progress |
+| Hard | 2/7 | 🔄 In Progress |
+
+### 📁 CTF Structure
+
+```
+ctf/
+├── README.md                          (this file)
+├── ctf-root-me/
+│   ├── challenges/
+│   │   ├── ctf-training-easy/
+│   │   │   ├── challenge-001.md
+│   │   │   ├── challenge-002.md
+│   │   │   └── ...
+│   │   ├── ctf-training-medium/
+│   │   │   └── (writeups in progress)
+│   │   ├── discovery-program/
+│   │   │   ├── programming/
+│   │   │   ├── network/
+│   │   │   ├── web-client/
+│   │   │   ├── web-server/
+│   │   │   ├── cryptography/
+│   │   │   └── steganography/
+│   │   └── solutions/
+│   │       └── writeups/
+│   └── progress.md                   Tracking & methodology notes
+└── other-platforms/                  (Future expansion)
+```
+
+### 📝 Writing a Writeup
+
+Each writeup follows this structure:
+
+```markdown
+# Challenge Name
+
+## Problem Statement
+[Description of the challenge]
+
+## Reconnaissance
+[Information gathering phase]
+
+## Solution Approach
+[Step-by-step methodology]
+
+## Key Concepts
+- Concept 1
+- Concept 2
+- Concept 3
+
+## Tools Used
+- Tool 1
+- Tool 2
+
+## Lessons Learned
+[Takeaways and applications]
+
+## Resources
+[References and documentation]
+```
 
 ---
 
-## 🔗 Cross-Repository References
+## 🔧 Configuration Examples
 
-### 📍 **Where Network Labs Fit**
-
-```
-Dinaverse Infrastructure Ecosystem
-│
-├── sovereign-ai-infrastructure
-│   └── Network topology (references this repo)
-│
-├── network-labs-documentation ⭐ (YOU ARE HERE)
-│   └── Cisco Packet Tracer hands-on training
-│
-├── infrastructure-as-code-lab
-│   └── Terraform/Ansible for network automation
-│
-└── proxmox-homelab-setup
-    └── Physical network connectivity & VLANs
-```
-
----
-
-## 📝 Configuration Snippets
-
-### Example: OSPF Basic Configuration
+### OSPF Configuration
 
 ```cisco
-! Router Configuration
 router ospf 1
  network 192.168.1.0 0.0.0.255 area 0
  network 192.168.2.0 0.0.0.255 area 0
@@ -243,26 +192,22 @@ router ospf 1
  default-information originate
 ```
 
-### Example: VLAN & Trunking
+### VLAN & Trunk Configuration
 
 ```cisco
-! Switch Configuration
 vlan 10
  name Management
 vlan 20
  name Data
-vlan 30
- name Voice
 
 interface range GigabitEthernet0/1-2
  switchport mode trunk
- switchport trunk allowed vlan 10,20,30
+ switchport trunk allowed vlan 10,20
 ```
 
-### Example: ACL for Security
+### ACL Security
 
 ```cisco
-! Access Control List
 access-list 101 permit tcp any 192.168.1.0 0.0.0.255 eq 443
 access-list 101 permit tcp any 192.168.1.0 0.0.0.255 eq 80
 access-list 101 deny ip any 192.168.0.0 0.0.255.255
@@ -274,59 +219,90 @@ interface GigabitEthernet0/0
 
 ---
 
-## 🎓 Learning Resources
+## 📖 Study Guides
 
-### 📖 **Official Documentation**
-- [Cisco Learning Network](https://learningnetwork.cisco.com/)
-- [Packet Tracer Tutorials](https://www.netacad.com/resources/packet-tracer)
-- [Cisco Command Reference](https://www.cisco.com/c/en/us/support/docs/index.html)
-
-### 🎯 **Certification Guides**
-- Cisco CCST Study Materials
-- CCNA Exam Topics (200-301)
-- Network Fundamentals (Routing, Switching, Security)
-
-### 🧪 **Practice Labs**
-- Cisco Packet Tracer Activities
-- This repository's structured labs
-- Root-Me CTF networking challenges (in `ctf/` folder)
+| Guide | Purpose |
+|-------|---------|
+| **[SSD Clone & GPT Guide](guides/SSD-Clone-GPT-Guide.md)** | Disk cloning & partition recovery |
+| **[OSPF Configuration Guide](guides/OSPF-Configuration-Guide.md)** | Routing deep-dive |
+| **[ACL Best Practices](guides/ACL-Best-Practices.md)** | Security design patterns |
 
 ---
 
-## 🤖 Automation & AI Integration
+## 🎓 Certification Targets
 
-This repository integrates with the broader **Dinaverse automation ecosystem**:
+- **Cisco CCST** — Q3 2026
+- **Cisco CCNA** — Q4 2026
 
-- 🔄 **Gemini CLI** — Autonomous documentation updates
-- 🤖 **n8n Workflows** — Lab deployment orchestration
-- 📊 **Metrics & Validation** — Automated topology checks
+### Study Path
 
----
-
-## 🎯 Philosophy
-
-> *Network design is foundational. Security is built-in. Documentation is non-negotiable. Every configuration is validated.*
-
----
-
-## 📞 Contact & Links
-
-| Platform | Link |
-|----------|------|
-| 🐙 **GitHub** | [Dinaverse](https://github.com/Dinaverse) |
-| 💼 **LinkedIn** | [Dina Cima](https://www.linkedin.com/in/dinacima) |
-| 🌐 **Portfolio** | [Dinaverse Landing Page](https://github.com/Dinaverse/Dinaverse) |
+1. Complete all basic topology labs
+2. Master routing protocols (OSPF, BGP)
+3. Practice switching and VLAN configurations
+4. Implement security (ACLs, firewalls)
+5. Design WAN topologies
 
 ---
 
-## 📄 License & Attribution
+## 🔗 Related Repositories
 
-This repository is part of the **Dinaverse infrastructure ecosystem**.
-
-- **Lab Content:** Open-source for educational use
-- **Configurations:** Based on Cisco best practices
-- **Documentation:** Created by Dinaverse
+| Repository | Purpose |
+|------------|---------|
+| **[sovereign-ai-infrastructure](https://github.com/Dinaverse/sovereign-ai-infrastructure)** | Lab architecture |
+| **[proxmox-homelab-setup](https://github.com/Dinaverse/proxmox-homelab-setup)** | Physical infrastructure |
+| **[infrastructure-as-code-lab](https://github.com/Dinaverse/infrastructure-as-code-lab)** | Network automation |
 
 ---
 
-*Built with networking expertise. Validated through hands-on practice. Documented for knowledge sharing.*
+## 📊 Lab Architecture Overview
+
+```
+┌──────────────────────────────────────────────────────────┐
+│                  ISP / Internet                          │
+└────────────────────┬─────────────────────────────────────┘
+                     │
+         ┌───────────┴───────────┐
+         │                       │
+   ┌─────▼──────┐        ┌──────▼──┐
+   │ Router R1  │────────│ Router R2│  (OSPF/BGP)
+   │ (Core)     │        │ (Border)│
+   └──┬──────┬──┘        └──┬──────┬┘
+      │      │              │      │
+   ┌──▼──┐ ┌─▼──┐       ┌──┐ │   ┌─▼──┐
+   │ SW1 │ │SW2 │       │FW│ │   │ SW3│
+   └──┬──┘ └────┘       └──┘ │   └────┘
+      │ VLAN 10,20,30        │
+   ┌──┴────────────┐     ┌───▼────┐
+   │   Hosts       │     │ DMZ    │
+   │   PCs/Server  │     │Servers │
+   └───────────────┘     └────────┘
+```
+
+---
+
+## ✅ Operational Status
+
+| Component | Status | Last Updated |
+|-----------|--------|---|
+| Cisco Labs | ✅ Active | 2026-07-05 |
+| Basic Topology | ✅ Complete | 2026-07-05 |
+| OSPF & BGP | ✅ Complete | 2026-07-05 |
+| VLANs & Switching | ✅ Complete | 2026-07-05 |
+| Security/ACLs | ✅ Complete | 2026-07-05 |
+| WAN Design | 🔄 In Progress | 2026-07-05 |
+| CTF Training | ✅ Active | 2026-07-05 |
+
+---
+
+## 📖 Documentation
+
+| Document | Purpose |
+|----------|---------|
+| **[Lab Guide](guides/)** | Detailed lab instructions |
+| **[Configuration Reference](configs/)** | CLI command reference |
+| **[Topology Diagrams](assets/diagrams/)** | Network visualizations |
+| **[CTF Writeups](ctf/)** | Challenge solutions |
+
+---
+
+*Network engineering fundamentals. Hands-on practice. Certification preparation. CTF methodology refinement.*
